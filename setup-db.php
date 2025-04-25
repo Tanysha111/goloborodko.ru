@@ -1,4 +1,6 @@
 <?php
+// setup-db.php
+>>>>>>> article
 include 'includes/db.php';
 // SQL-запрос для создания таблицы статей
 $query = <<<SQL
