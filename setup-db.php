@@ -1,8 +1,6 @@
 <?php
-// setup-db.php
 >>>>>>> article
 include 'includes/db.php';
-// SQL-запрос для создания таблицы статей
 $query = <<<SQL
 CREATE TABLE IF NOT EXISTS articles (
    id SERIAL PRIMARY KEY,
@@ -11,7 +9,6 @@ CREATE TABLE IF NOT EXISTS articles (
    created_at TIMESTAMP DEFAULT NOW()
 )
 SQL;
-// Выполнение запроса
 $result = pg_query($db_conn, $query);
 
 
@@ -20,6 +17,5 @@ if ($result) {
 } else {
    echo "Ошибка при создании таблицы: " . pg_last_error($db_conn);
 }
-// Закрытие соединения (опционально)
 pg_close($db_conn);
 ?>
